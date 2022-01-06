@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>M-EBEL</title>
+<meta charset="utf-8">
+<style>
+  h1.relative {
+  position: relative;
+  left: 30px;
+  bottom: 10px;
+}
+.footerline{
+  height: 5px;
+  background-color: black;
+  border: none;
+}
+.footer {
+  position: relative;
+  left: 0;
+  bottom: -50;
+  width: 100%;
+  height: 100px;
+  background-color: grey;
+  color:black;
+}
+
+.footerinfo {
+  display: flex;
+  color:black;
+   font-family:'Trebuchet MS', sans-serif; 
+   margin-bottom: 10px;
+   margin-left: 30px;
+   margin-top: 25px;
+   font-size: 16px;
+}
+  table, th, td {
+    background-color: rgb(249, 253, 255);
+  border: 2px solid rgb(0, 0, 0);
+  border-collapse: collapse;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*   button.auth {
+    border: none;
+    color: black;
+    padding: auto;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+  } */
+th, td {
+  text-align: center;
+  padding: 10px;
+}
+td:nth-child(even){
+  background-color: #e1f1f1;
+}
+th:nth-child(even){
+  background-color: #bbdddd;
+}
+/* .mom {
+    width: 100%; 
+    display: table;
+    border: 1px solid #444444;
+}
+.child {
+    display: table-cell;
+}
+.childinner {
+    margin-left: 25px;
+    background-color: #cccccc;
+    min-height: 40px;
+}
+.child:first-child .childinner {
+    margin-left: 0;
+} */
+.paneltop {
+  background-color: rgb(132, 177, 243);
+  width: 100%; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+}
+/* .topelement {
+  display: flex;
+} */
+.topelement-right {
+  display: flex;
+  margin-right: 30px;
+  justify-content: center;
+}
+.topelementmbl{
+  color:black;
+   font-family:'Trebuchet MS', sans-serif; 
+   font-style: normal;
+   margin-bottom: 10px;
+   margin-left: 30px;
+   margin-top: 5px;
+   font-size: 36px;
+}
+.topelementbutton {
+  background: none;
+  border: none;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  font-size: 26px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.topelementbutton:hover {
+  background-color:rgb(80, 137, 223);
+}
+table.main {
+  padding: 40px;
+  width:  80%;
+  margin-top: 40px;
+  margin-bottom: 10%;
+}
+</style>
+</head>
+<!-- <body>
+<h2> Poshol nakhoj:</h2>
+<form action="biba.php" method="POST">
+<p>: <input type="text" name="firstname" /></p>
+<p>: <input type="text" name="lastname" /></p>
+<table></table>
+<input type="submit" value="die">
+</form>
+</body> -->
+<body style="background-color: rgb(245, 245, 245);">
+<div class="paneltop">
+  <div class="topelementmbl" style="user-select: none;">
+    M-EBEL
+  </div>
+  <div class="topelement-right" style="margin-left: 40px">
+    <button class="topelementbutton">
+      регистрация
+    </button>
+    <button class="topelementbutton">
+      авторизация
+    </button>
+  </div>
+<!--   <div class="child">
+      <div class="childinner">Amet laborum cupiditate.</div>
+  </div>
+  <div class="child">
+      <div class="childinner">Ratione maxime et!</div>
+  </div> -->
+</div>
+
+<!-- <div style="background-color:rgb(202, 183, 72);color:#000000;padding-top:1px;">
+  <h1 class="relative" style="color:black; font-family:'Trebuchet MS', sans-serif; 
+   margin-bottom: 10px;">
+    M-EBEL 
+  </h1>
+</div> -->
+<table class="main" align="center">
+  <tr>
+    <th>Код товара</th>
+    <th>Наименование товара</th>
+    <th>Вид товара</th>
+    <th>Материал</th>
+    <th>Цвет</th>
+    <th>Цена за душу сани</th>
+  </tr>
+  <tr>
+    <td>228</td>
+    <td>Толкан</td>
+    <td>Толкан блинб чё ещё-то</td>
+    <td>Золото 88,27%</td>
+    <td>спанч бобовый</td>
+    <td>3 копейки</td>
+  </tr>
+  <tr>
+    <td>1337</td>
+    <td>стипуха после 3 семестра</td>
+    <td>влажные мечты</td>
+    <td>бабло</td>
+    <td>приятный</td>
+    <td>3 копейки</td>
+  </tr>
+  <tr>
+    <td>1488</td>
+    <td>оценка отлично за лабы и курсач</td>
+    <td>прикол</td>
+    <td>незнаю</td>
+    <td>чёрный</td>
+    <td>угадай))))))))))))))))))))))</td>
+  </tr>
+  <tr>
+    <td>322</td>
+    <td>дошик с грибами</td>
+    <td>строительный материал</td>
+    <td>селёдка</td>
+    <td>есть</td>
+    <td>да</td>
+  </tr>
+  <tr>
+    <td>а</td>
+  </tr>
+  <tr>
+    <td>у</td>
+  </tr>
+  <tr>
+    <td>е</td>
+  </tr>
+  <tr>
+    <td>у</td>
+  </tr>
+  <tr>
+    <td>а</td>
+  </tr>
+  <tr>
+    <td>у</td>
+  </tr>
+  <tr>
+    <td>е</td>
+  </tr>
+  <tr>
+    <td>у</td>
+  </tr>
+  <tr>
+    <td>а</td>
+  </tr>
+  <tr>
+    <td>у</td>
+  </tr>
+  <tr>
+    <td>е</td>
+  </tr>
+</table> <!--  <hr class="footerline"> -->
+<footer style="background-color: grey; position: relative; bottom: 0;">
+  <div style="display: flex; justify-content: space-between; margin-right: 40px;">
+    <div class="footerinfo">
+    бибабуба 228
+    <br>
+    почта: ага чё ещё захотел
+    </div>
+    <div class="footerinfo">
+    адрес: не скажу))0)
+    <br>
+    насчёт рекламы:*ссылка на вирус*
+    </div>
+  </div>
+</footer>
+<!-- <div class="footer">
+
+  <div style="display: flex; justify-content: space-between; margin-right: 40px;">
+    <div class="footerinfo">
+    228
+    <br>
+    почта: чё ещё захотел
+    </div>
+    <div class="footerinfo">
+    адрес: 
+    <br>
+    насчёт рекламы:*ссылка на вирус*
+    </div>
+  </div>
+</div> -->
+</body>
+</html>
