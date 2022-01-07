@@ -4,24 +4,43 @@
 <title>M-EBEL</title>
 <meta charset="utf-8">
 <style>
-  h1.relative {
+  html, body {
+    height: 100%;
+  }
+.content {
+/* height: 80%;
+margin-bottom: 50px;
+padding-bottom: 50px; */
+/* box-sizing: border-box; */
+height: auto !important; 
+min-height: 100%;
+/* height: 100%; */
+/* padding-bottom: 100px; */
+/* margin-bottom: -100px; */
+}
+h1.relative {
   position: relative;
   left: 30px;
-  bottom: 10px;
+bottom: 10px;
 }
 .footerline{
   height: 5px;
   background-color: black;
   border: none;
 }
+.push {
+  height: 100px;
+}
 .footer {
   position: absolute;
   left: 0;
-  margin-top: 10%;
+  bottom: -1;
+/*   margin-top: -50px; */
   width: 100%;
   height: 100px;
   background-color: grey;
   color:black;
+  overflow: hidden;
 }
 .footerinfo {
   display: flex;
@@ -42,7 +61,7 @@
   padding: 12px 30px 12px 40px;
   border:  1px solid rgb(124, 124, 124);
   margin-bottom: 20px;
-  margin-top: 5%;
+  margin-top: 10%;
   margin-left: 40px;
 }
 table.main {
@@ -51,6 +70,7 @@ table.main {
   width:  95%;
   margin-left: 2%;
   margin-bottom: 10%;
+ /*  padding-bottom: 100px; */
 }
   table, td, th{
   background-color: rgb(250, 250, 250);
@@ -166,7 +186,7 @@ th:nth-child(odd){
   margin-left: 20px;
 }
 .topelementbutton:hover {
-  background-color:rgb(80, 137, 223);
+  background-color: rgb(131, 162, 209);
 }
 </style>
 <script>
@@ -178,7 +198,7 @@ th:nth-child(odd){
     tr = table.getElementsByTagName("tr");
     for (i = 0; i < tr.length; i++)
     {
-      td = tr[i].getElementsByTagName("td")[1];
+      td = tr[i].getElementsByTagName("td")[2];
       if (td)
        {
          txt = td.textContent;
@@ -205,6 +225,7 @@ th:nth-child(odd){
 </form>
 </body> -->
 <body style="background-color: rgb(250, 250, 250);">
+<div class="content">
 <div class="paneltop">
   <div class="topelementmbl" style="user-select: none;">
     M-EBEL
@@ -324,7 +345,9 @@ placeholder="Поиск по названию" onkeyup="barFilter()">
   </tr> -->
 </table> <!--  <hr class="footerline"> -->
 <!-- <footer style="background-color: grey; position: relative; bottom: 0;" > -->
-<footer class="footer">
+  <div class="push"></div>
+</div> 
+<div class="footer">
   <div style="display: flex; justify-content: space-between; margin-right: 40px;">
     <div class="footerinfo">
     бибабуба 228
@@ -337,7 +360,7 @@ placeholder="Поиск по названию" onkeyup="barFilter()">
     насчёт рекламы:*ссылка на вирус*
     </div>
   </div>
-</footer>
+</div>
 <!-- <div class="footer">
 
   <div style="display: flex; justify-content: space-between; margin-right: 40px;">
