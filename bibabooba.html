@@ -32,12 +32,24 @@
    margin-top: 25px;
    font-size: 16px;
 }
+.searchBar {
+  background-image: url('search.png');
+  background-repeat: no-repeat;
+  background-position: 8px 10px;
+  background-size: 24px;
+  font-size: 16px;
+  width: 50%;
+  padding: 12px 30px 12px 40px;
+  border:  1px solid rgb(124, 124, 124);
+  margin-bottom: 20px;
+  margin-top: 5%;
+  margin-left: 40px;
+}
 table.main {
   text-align: left;
   padding: 40px;
   width:  95%;
   margin-left: 2%;
-  margin-top: 10%;
   margin-bottom: 10%;
 }
   table, td, th{
@@ -157,6 +169,31 @@ th:nth-child(odd){
   background-color:rgb(80, 137, 223);
 }
 </style>
+<script>
+  function barFilter() {
+    var input, filter, table, tr, td, i, txt;
+    input = document.getElementById("filterInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("priceList");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++)
+    {
+      td = tr[i].getElementsByTagName("td")[1];
+      if (td)
+       {
+         txt = td.textContent;
+         if (txt.toUpperCase().indexOf(filter) > -1)
+         {
+           tr[i].style.display = "";
+         }
+         else 
+         {
+           tr[i].style.display = "none";
+         }
+       }
+    }
+  }
+</script>
 </head>
 <!-- <body>
 <h2> Poshol nakhoj:</h2>
@@ -188,7 +225,9 @@ th:nth-child(odd){
     M-EBEL 
   </h1>
 </div> -->
-<table class="main" align="center">
+<input id="filterInput" type="text" class="searchBar" 
+placeholder="Поиск по названию" onkeyup="barFilter()"> 
+<table class="main" align="center" id="priceList">
   <tr>
     <th style="display: none;">Действия</th>
   <!--   <th ">Действия</th> -->
@@ -218,6 +257,9 @@ th:nth-child(odd){
     <td>3 копейки</td>
   </tr>
   <tr>
+    <td class="actioncell">
+      <button class="editbutton"></button><button class="deletebutton"></button>
+    </td>
     <td>1337</td>
     <td>стипуха после 3 семестра</td>
     <td>влажные мечты</td>
@@ -226,6 +268,9 @@ th:nth-child(odd){
     <td>3 копейки</td>
   </tr>
   <tr>
+    <td class="actioncell">
+      <button class="editbutton"></button><button class="deletebutton"></button>
+    </td>
     <td>1488</td>
     <td>оценка отлично за лабы и курсач</td>
     <td>прикол</td>
@@ -234,6 +279,9 @@ th:nth-child(odd){
     <td>угадай))))))))))))))))))))))</td>
   </tr>
   <tr>
+    <td class="actioncell">
+      <button class="editbutton"></button><button class="deletebutton"></button>
+    </td>
     <td>322</td>
     <td>дошик с грибами</td>
     <td>строительный материал</td>
