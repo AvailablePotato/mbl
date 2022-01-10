@@ -32,5 +32,5 @@ if(isset($_GET['function']))
         else{
             echo (0);
         }  
-    }  
+    }
 ?>
