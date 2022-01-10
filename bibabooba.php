@@ -355,9 +355,9 @@ th:nth-child(odd){
   function addRow()
   { 
     if (!adminSwitch) return;
-    var input, filter, tr, td, i, txt;
-    var table = document.getElementById("priceList");
-    var newRow = table.insertRow(1);
+     var input, filter, tr, td, i, txt;
+     var table = document.getElementById("priceList");
+     var newRow = table.insertRow(1);
     for (var i = 0; i < 7;i++)
     {
       var cell = newRow.insertCell(i);
