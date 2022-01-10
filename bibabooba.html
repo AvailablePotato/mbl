@@ -234,6 +234,7 @@
   margin: 5% auto 15% auto; 
   border: 1px solid #888;
   width: 30%; 
+  min-width: 100px;
 }
 .cancelbtn {
   width: auto;
@@ -408,7 +409,7 @@
     editAlreadyUsed = false;
   }
 
-var modal = document.getElementById('form');
+/* var modal = document.getElementById('form'); */
 /* window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
@@ -422,11 +423,18 @@ var modal = document.getElementById('form');
 function closeForm()
 {
   var modal = document.getElementById('form');
-  var inp = document.getElementById('pass');
-  if (inp)
-    inp.value = '';
+  var inpPass = document.getElementById('pass');
+  var inpUname = document.getElementById('usern');
+  if (inpPass)
+    inpPass.value = '';
+  if (inpUname)
+    inpUname.value = '';  
   if (modal)
     modal.style.display = "none";
+}
+function enterPressed()
+{
+  closeForm();
 }
 </script>
 </head>
@@ -446,11 +454,11 @@ function closeForm()
     </div>
     <div style="padding: 20px; margin-top: 20px">
       <label for="uname" style="padding-bottom: 20px;;"><b class="label">Имя пользователя</b></label>
-      <input id="pass" type="password" placeholder="Имя пользователя" name="psw" required style="width: 93%; font-size: 16px; padding: 10px; margin: 5px 0 15px 0; ">
+      <input id="usern" type="text" placeholder="Имя пользователя" name="uname" required style="width: 93%; font-size: 16px; padding: 10px; margin: 5px 0 15px 0; ">
       <label for="psw" style="padding-bottom: 15px; "><b class="label">Пароль</b></label>
       <input id="pass" type="password" placeholder="Пароль" name="psw" required style="width: 93%; font-size: 16px; padding: 10px; margin-top: 5px;">
       <div style="padding: 20px 15px 15px 15px;">
-        <button type="button" onclick="document.getElementById('form').style.display='none'" class="enterbtn">Войти</button>
+        <button type="button" onclick="enterPressed()" class="enterbtn">Войти</button>
       </div>
     </div>
   </form>
