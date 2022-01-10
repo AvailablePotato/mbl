@@ -20,7 +20,7 @@ if(isset($_GET['function']))
         $editbase = "UPDATE `pricelist` SET `serialNum` = '$row[0]', `Name` = '$row[1]', `Type` = '$row[2]', `Material` = '$row[3]', `Color` = '$row[4]', `Price` = '$row[5]' WHERE `pricelist`.`id` = $eid;";
         $conn -> query($editbase);
         echo("Данные успешно введены");
-    }
+    }  
     if($_GET['function'] == 'login'){
         $user = $_GET['inpUname'];
         $pass = $_GET['inpPass'];
