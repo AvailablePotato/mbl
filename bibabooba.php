@@ -279,7 +279,7 @@ th:nth-child(odd){
   padding: 10px;
   text-align: center;
   font-size: 26px;
-  cursor: pointer;
+  cursor: pointer;      
   margin-left: 20px;  
 }
 .topelementbutton:hover {
