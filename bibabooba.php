@@ -280,7 +280,7 @@ th:nth-child(odd){
   text-align: center;
   font-size: 26px;
   cursor: pointer;
-  margin-left: 20px;
+  margin-left: 20px;  
 }
 .topelementbutton:hover {
   background-color: rgb(131, 162, 209);
@@ -327,7 +327,7 @@ th:nth-child(odd){
         cell.style.display = "none";
       }
     }   */
-  }
+  }   
   function barFilter() 
   {
     var input, filter, table, tr, td, i, txt;
