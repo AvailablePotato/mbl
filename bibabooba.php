@@ -423,7 +423,7 @@ th:nth-child(odd){
       td[i].style.border = ""
       td[i].contentEditable = false;
     }
-    editAlreadyUsed = false;
+    editAlreadyUsed = false;    
   }
 /*   function cancelOp() 
   {
